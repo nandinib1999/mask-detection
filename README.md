@@ -17,7 +17,7 @@ Currently, I have 1672 images in total for both masked and non-masked faces. The
 
 - **model.py** - In this file, the model used for the classification task has been defined. I have extended the VGG16 model for the classification purposes.
 
-- **train.py** - The training of model can be performed using this python script. Currently, the model trains for 50 epochs while monitoing the validation loss for early stopping. When training is complete, the model is saved in h5 format for later use.
+- **train.py** - The training of model can be performed using this python script. Currently, the model trains for 50 epochs with adam optimizer. When training is complete, the model is saved in h5 format for later use.
 
 - **run.py** - This file can be used to test the trained model. It supports two kinds of input - webcam feed or a video input. The option to be selected can be reflected with cmd arguments --play_video and --webcam. By default, both the arguments are set to False.
 
@@ -32,3 +32,8 @@ The above command can be used to run the testing script with webcam.
 ```python run.py --play_video=True --video_path=<path to the video>```
 
 The above command can be used to run the testing script with video.
+
+## Scope of Improvement
+
+- More dataset needs to be added to make the model work flawlessly on the security camera feed. Deep learning models work better with more data and the availability of data was a limitation for me.
+- Face Detection model can be trained with the help of Yolo or other object detection algorithm for better performance than the already trained one.
