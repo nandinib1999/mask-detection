@@ -21,3 +21,14 @@ Currently, I have 1672 images in total for both masked and non-masked faces. The
 
 - **run.py** - This file can be used to test the trained model. It supports two kinds of input - webcam feed or a video input. The option to be selected can be reflected with cmd arguments --play_video and --webcam. By default, both the arguments are set to False.
 
+## Run the scripts 
+
+To test the trained model, please download the model weights from [model.h5](https://drive.google.com/uc?export=download&id=1SUbVSCT1RkMSdksDwjZ1h1K4KNRHCLBl) and save it in the working directory where all the python scripts are stored.
+
+```python run.py --webcam=True```
+
+The above command can be used to run the testing script with webcam.
+
+```python run.py --play_video=True --video_path=<path to the video>```
+
+The above command can be used to run the testing script with video.
